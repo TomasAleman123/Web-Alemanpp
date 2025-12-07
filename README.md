@@ -4,3 +4,6 @@ El proyecto es una web app que permite registrarse, iniciar sesión y cerrar ses
 El objetivo es poder intensificar los saberes adeudados y aprender lo visto en el año 
 Tengo 2 carpetan que es una con las pantallas y la otra la documentacion 
 Tomas Aleman 
+git add .
+git commit -m "Agregar carpeta desde escritorio"
+git push
