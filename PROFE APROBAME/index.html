@@ -1,0 +1,460 @@
+<!-- 
+  ====================================
+  WEB ALEMANPP - PÁGINA DE LOGIN
+  ====================================
+  Este archivo HTML contiene la estructura básica
+  de un formulario de login. Cada elemento está
+  explicado para entender su propósito.
+-->
+
+<!DOCTYPE html>
+<!-- 
+  DOCTYPE html: Indica que este es un documento HTML5.
+  Es obligatorio al principio de todo archivo HTML.
+-->
+
+<html lang="es">
+<!-- 
+  <html>: Etiqueta raíz que engloba todo el documento.
+  lang="es": Define que el idioma del sitio es español.
+-->
+
+<head>
+  <!-- 
+    <head>: Sección que contiene información sobre la página
+    que NO se muestra directamente en pantalla (metadatos,
+    estilos, scripts externos, etc.)
+  -->
+  
+  <meta charset="UTF-8">
+  <!-- 
+    Meta charset: Define la codificación de caracteres UTF-8
+    para que se muestren correctamente caracteres especiales
+    como acentos y caracteres españoles.
+  -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    Meta viewport: Hace que la página sea responsive (adaptable)
+    en dispositivos móviles. initial-scale=1.0 define el zoom inicial.
+  -->
+  
+  <title>Web Alemanpp - Login</title>
+  <!-- 
+    <title>: Define el título que aparece en la pestaña del navegador.
+  -->
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- 
+    <link>: Importa un archivo CSS externo.
+    rel="stylesheet": Indica que es una hoja de estilos.
+    href="style.css": Ruta del archivo CSS con los estilos visuales.
+  -->
+</head>
+
+<body>
+  <!-- 
+    <body>: Sección visible del documento HTML.
+    Aquí va todo lo que el usuario ve en la pantalla.
+  -->
+  
+  <!-- PANTALLA DE BIENVENIDA -->
+  <div id="welcomeScreen" class="welcome-container">
+    <!-- 
+      <div id="welcomeScreen">: Contenedor de la pantalla de bienvenida.
+      Esto será lo primero que ve el usuario cuando entra a la página.
+    -->
+    
+    <div class="welcome-content">
+      <!-- Contenedor con marco naranja para la bienvenida -->
+      
+      <!-- LOGO TA -->
+      <svg class="welcome-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- 
+          <svg>: Etiqueta para insertar gráficos vectoriales.
+          class="welcome-logo": Clase para estilos del logo.
+          viewBox="0 0 200 200": Define el área de visualización del SVG.
+        -->
+        
+        <!-- Círculo exterior azul marino -->
+        <circle cx="100" cy="100" r="95" fill="none" stroke="#1e3a5f" stroke-width="12"/>
+        
+        <!-- Letras "TA" -->
+        <text x="50" y="140" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#1e3a5f">TA</text>
+        
+        <!-- Monitor (pantalla) -->
+        <rect x="115" y="60" width="50" height="35" rx="3" fill="none" stroke="#1e3a5f" stroke-width="3"/>
+        <rect x="125" y="95" width="30" height="6" fill="#1e3a5f"/>
+        
+        <!-- Teclado -->
+        <g>
+          <rect x="115" y="105" width="50" height="20" rx="2" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+          <!-- Teclas -->
+          <circle cx="122" cy="110" r="1.5" fill="#1e3a5f"/>
+          <circle cx="130" cy="110" r="1.5" fill="#1e3a5f"/>
+          <circle cx="138" cy="110" r="1.5" fill="#1e3a5f"/>
+          <circle cx="146" cy="110" r="1.5" fill="#1e3a5f"/>
+          <circle cx="154" cy="110" r="1.5" fill="#1e3a5f"/>
+          
+          <circle cx="122" cy="118" r="1.5" fill="#1e3a5f"/>
+          <circle cx="130" cy="118" r="1.5" fill="#1e3a5f"/>
+          <circle cx="138" cy="118" r="1.5" fill="#1e3a5f"/>
+          <circle cx="146" cy="118" r="1.5" fill="#1e3a5f"/>
+          <circle cx="154" cy="118" r="1.5" fill="#1e3a5f"/>
+        </g>
+      </svg>
+      
+      <p class="project-title">Proyecto de Intensificación de Saberes</p>
+      <!-- 
+        <p>: Párrafo de texto.
+        class="project-title": Clase para estilos del título del proyecto.
+        Aparece en la parte superior.
+      -->
+      
+      <h1 class="welcome-title">Web Alemanpp</h1>
+      <!-- 
+        <h1>: Encabezado principal con el nombre del proyecto.
+        class="welcome-title": Clase para estilos especiales de bienvenida.
+      -->
+      
+      <p class="author-name">Tomás Aleman</p>
+      <!-- 
+        <p>: Párrafo con el nombre del autor.
+        class="author-name": Clase para estilos del autor.
+        Aparece abajo a un lado.
+      -->
+      
+      <button id="nextButton" class="welcome-button">Siguiente</button>
+      <!-- 
+        <button id="nextButton">: Botón para pasar a la siguiente pantalla.
+        id="nextButton": ID para acceder desde JavaScript.
+        class="welcome-button": Clase para estilos del botón.
+      -->
+    </div>
+  </div>
+  
+  <!-- PANTALLA DE SELECCIÓN: INICIAR SESIÓN O REGISTRARSE -->
+  <div id="choiceScreen" class="choice-container" style="display: none;">
+    <!-- 
+      <div id="choiceScreen">: Pantalla para elegir entre login o registro.
+      style="display: none;": Inicialmente oculta.
+    -->
+    
+    <div class="choice-content">
+      <!-- Marco gris con dos opciones -->
+      
+      <h2 class="choice-title">Bienvenido a Web Alemanpp</h2>
+      <!-- 
+        <h2>: Encabezado de nivel 2.
+      -->
+      
+      <p class="choice-subtitle">¿Qué deseas hacer?</p>
+      <!-- 
+        <p>: Párrafo de texto.
+      -->
+      
+      <div class="choice-buttons">
+        <!-- Contenedor para los dos botones -->
+        
+        <button id="loginChoiceBtn" class="choice-button">Iniciar Sesión</button>
+        <!-- 
+          Botón para ir a login.
+        -->
+        
+        <button id="registerChoiceBtn" class="choice-button">Registrarse</button>
+        <!-- 
+          Botón para ir a registro.
+        -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- PANTALLA DE LOGIN -->
+  <div id="loginScreen" class="login-container" style="display: none;">
+    <!-- 
+      <div id="loginScreen">: Contenedor de la pantalla de login.
+      style="display: none;": Inicialmente oculta.
+    -->
+    
+    <h1>Web Alemanpp</h1>
+    <!-- 
+      <h1>: Encabezado de nivel 1 (el más importante).
+      Es el título principal de la página de login.
+    -->
+    
+    <form id="loginForm">
+      <!-- 
+        <form>: Etiqueta que contiene un formulario.
+        id="loginForm": Identificador único para acceder a este formulario
+        desde JavaScript y validar los datos.
+      -->
+      
+      <div class="form-group">
+        <!-- Primer grupo del formulario: Email/Usuario -->
+        
+        <label for="email">Correo Electrónico</label>
+        <!-- 
+          <label>: Etiqueta de texto para identificar qué información pedir.
+          for="email": Conecta esta etiqueta con el input que tiene id="email".
+          Cuando el usuario hace clic en la etiqueta, enfoca el input.
+        -->
+        
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Ingresa tu correo" 
+          required>
+        <!-- 
+          <input>: Campo de entrada para que el usuario escriba datos.
+          type="email": Especifica que solo acepta formato de email.
+          id="email": Identificador único para este campo.
+          name="email": Nombre del campo (se envía con el formulario).
+          placeholder="...": Texto de ejemplo que desaparece al escribir.
+          required: Atributo que obliga a llenar este campo antes de enviar.
+        -->
+      </div>
+      
+      <div class="form-group">
+        <!-- Segundo grupo del formulario: Contraseña -->
+        
+        <label for="password">Contraseña</label>
+        <!-- 
+          <label>: Etiqueta que identifica el campo de contraseña.
+          for="password": Conecta con el input que tiene id="password".
+        -->
+        
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Ingresa tu contraseña" 
+          required>
+        <!-- 
+          type="password": El texto que escriba el usuario aparecerá como puntos.
+          Esto es por seguridad para no mostrar la contraseña en pantalla.
+          required: Obliga a llenar este campo.
+        -->
+      </div>
+      
+      <button type="submit">Iniciar Sesión</button>
+      <!-- 
+        <button>: Botón para enviar el formulario.
+        type="submit": Define que este botón envía los datos del formulario.
+        Al hacer clic, se validan los campos (required) y se ejecuta
+        el evento submit del formulario.
+      -->
+    </form>
+    
+    <div class="link-container">
+      <!-- Contenedor para los enlaces adicionales -->
+      
+      <p><a href="#" id="backToChoice">Volver</a></p>
+      <!-- 
+        <p>: Párrafo de texto.
+        <a>: Hipervínculo (enlace).
+        id="backToChoice": ID para volver a la pantalla de selección.
+      -->
+    </div>
+  </div>
+  
+  <!-- PANTALLA DE REGISTRO -->
+  <div id="registerScreen" class="register-container" style="display: none;">
+    <!-- 
+      <div id="registerScreen">: Contenedor de la pantalla de registro.
+      style="display: none;": Inicialmente oculta.
+    -->
+    
+    <h1>Registrarse</h1>
+    <!-- 
+      <h1>: Encabezado de nivel 1.
+      Título de la pantalla de registro.
+    -->
+    
+    <form id="registerForm">
+      <!-- 
+        <form>: Etiqueta que contiene el formulario de registro.
+        id="registerForm": Identificador único.
+      -->
+      
+      <div class="form-group">
+        <!-- Grupo: Email -->
+        
+        <label for="registerEmail">Correo Electrónico</label>
+        <!-- 
+          <label>: Etiqueta para identificar el campo.
+          for="registerEmail": Conecta con el input.
+        -->
+        
+        <input 
+          type="email" 
+          id="registerEmail" 
+          name="registerEmail" 
+          placeholder="Ingresa tu correo" 
+          required>
+        <!-- 
+          <input>: Campo de entrada.
+          type="email": Solo acepta formato de email.
+          id="registerEmail": Identificador único.
+          placeholder="...": Texto de ejemplo.
+          required: Campo obligatorio.
+        -->
+      </div>
+      
+      <div class="form-group">
+        <!-- Grupo: Nombre de usuario -->
+        
+        <label for="registerUsername">Nombre de Usuario</label>
+        <!-- 
+          <label>: Etiqueta para el nombre de usuario.
+        -->
+        
+        <input 
+          type="text" 
+          id="registerUsername" 
+          name="registerUsername" 
+          placeholder="Elige un nombre de usuario" 
+          required>
+        <!-- 
+          type="text": Campo de texto.
+          required: Obligatorio.
+        -->
+      </div>
+      
+      <div class="form-group">
+        <!-- Grupo: Contraseña -->
+        
+        <label for="registerPassword">Contraseña</label>
+        <!-- 
+          <label>: Etiqueta para la contraseña.
+        -->
+        
+        <input 
+          type="password" 
+          id="registerPassword" 
+          name="registerPassword" 
+          placeholder="Crea una contraseña" 
+          required>
+        <!-- 
+          type="password": Oculta lo que se escribe.
+          required: Obligatorio.
+        -->
+      </div>
+      
+      <div class="form-group">
+        <!-- Grupo: Confirmar contraseña -->
+        
+        <label for="confirmPassword">Confirmar Contraseña</label>
+        <!-- 
+          <label>: Etiqueta para confirmar contraseña.
+        -->
+        
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          name="confirmPassword" 
+          placeholder="Confirma tu contraseña" 
+          required>
+        <!-- 
+          type="password": Oculta lo que se escribe.
+          required: Obligatorio.
+        -->
+      </div>
+      
+      <button type="submit">Registrarse</button>
+      <!-- 
+        <button type="submit">: Botón para enviar el registro.
+      -->
+    </form>
+    
+    <div class="link-container">
+      <!-- Contenedor para los enlaces adicionales -->
+      
+      <p><a href="#" id="backToChoice2">Volver</a></p>
+      <!-- 
+        <a>: Enlace para volver.
+        id="backToChoice2": ID para volver a la pantalla de selección.
+      -->
+    </div>
+  </div>
+  
+  <!-- PANTALLA DE BIENVENIDA (DASHBOARD) -->
+  <div id="dashboardScreen" class="dashboard-container" style="display: none;">
+    <!-- 
+      <div id="dashboardScreen">: Contenedor de la pantalla de bienvenida.
+      style="display: none;": Inicialmente oculta.
+      Se muestra cuando el usuario inicia sesión o se registra correctamente.
+    -->
+    
+    <!-- BOTÓN DE CERRAR SESIÓN EN LA ESQUINA SUPERIOR DERECHA -->
+    <button id="logoutButton" class="logout-button">Cerrar Sesión</button>
+    <!-- 
+      <button id="logoutButton">: Botón para cerrar sesión.
+      class="logout-button": Clase para estilos especiales.
+      Se posiciona en la esquina superior derecha.
+    -->
+    
+    <!-- MENSAJE DE BIENVENIDA -->
+    <h1 id="welcomeMessage" class="welcome-message">
+      ¡Bienvenido!
+    </h1>
+    <!-- 
+      <h1 id="welcomeMessage">: Encabezado que muestra "¡Bienvenido [nombre]!"
+      class="welcome-message": Clase para estilos grandes y centrados.
+    -->
+  </div>
+  
+  <!-- MODAL DE CONFIRMACIÓN DE CERRAR SESIÓN -->
+  <div id="logoutModal" class="logout-modal" style="display: none;">
+    <!-- 
+      <div id="logoutModal">: Modal (ventana flotante) de confirmación.
+      style="display: none;": Inicialmente oculta.
+      Se muestra cuando el usuario hace clic en "Cerrar Sesión".
+    -->
+    
+    <div class="logout-modal-content">
+      <!-- Contenedor con el mensaje y botones -->
+      
+      <h2>¿Seguro desea cerrar sesión?</h2>
+      <!-- 
+        <h2>: Pregunta de confirmación.
+      -->
+      
+      <div class="logout-modal-buttons">
+        <!-- Contenedor para los botones sí y no -->
+        
+        <button id="confirmLogout" class="logout-yes">Sí</button>
+        <!-- 
+          Botón para confirmar cerrar sesión.
+        -->
+        
+        <button id="cancelLogout" class="logout-no">No</button>
+        <!-- 
+          Botón para cancelar y volver al dashboard.
+        -->
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/storage.js"></script>
+  <!-- 
+    storage.js: Funciones para guardar y obtener usuarios de localStorage.
+  -->
+  
+  <script src="js/navigation.js"></script>
+  <!-- 
+    navigation.js: Lógica para navegar entre pantallas.
+  -->
+  
+  <script src="js/login.js"></script>
+  <!-- 
+    login.js: Validación y procesamiento del formulario de login.
+  -->
+  
+  <script src="js/register.js"></script>
+  <!-- 
+    register.js: Validación y procesamiento del formulario de registro.
+  -->
+</body>
+
+</html>
