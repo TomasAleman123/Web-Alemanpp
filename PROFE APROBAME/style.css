@@ -1,0 +1,1721 @@
+/*
+  ====================================
+  WEB ALEMANPP - ESTILOS CSS
+  ====================================
+  Este archivo contiene todos los estilos visuales
+  para la página de login. Cada regla está explicada.
+*/
+
+/* ===========================================
+   0. ESTILOS DEL LOGO
+   =========================================== */
+
+/*
+  .welcome-logo: Estilos para el logo SVG "TA" con computadora.
+*/
+
+.welcome-logo {
+  /*
+    width: 150px;
+    height: 150px;
+    
+    ¿Qué hace?
+    - Define el tamaño del logo SVG.
+    - 150x150 píxeles para que sea visible y prominent.
+  */
+  width: 150px;
+  height: 150px;
+  
+  /*
+    margin-bottom: 30px;
+    
+    ¿Qué hace?
+    - Agrega espacio bajo el logo.
+    - Separa el logo del título del proyecto.
+  */
+  margin-bottom: 30px;
+  
+  /*
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    ¿Qué hace?
+    - Centra el logo horizontalmente.
+    - display: block hace que ocupe una línea completa.
+    - margin-left/right: auto centra el elemento.
+  */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /*
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    
+    ¿Qué hace?
+    - Agrega una sombra suave alrededor del logo.
+    - Proporciona profundidad visual.
+  */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+
+/* ===========================================
+   1. RESETEAR ESTILOS POR DEFECTO DEL NAVEGADOR
+   =========================================== */
+
+/*
+  *: Selector universal que aplica estilos a TODOS los elementos.
+  
+  ¿Qué hace?
+  - margin: 0; Elimina márgenes (espacios exteriores).
+  - padding: 0; Elimina rellenos (espacios interiores).
+  - box-sizing: border-box; Incluye bordes y rellenos en el ancho total.
+  
+  ¿Por qué?
+  - Los navegadores agregan márgenes/rellenos por defecto.
+  - Esto causa inconsistencias en el diseño.
+  - Resetear todo permite tener control total.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ===========================================
+   2. ESTILOS DEL CUERPO (BODY)
+   =========================================== */
+
+/*
+  body: Aplica estilos a todo el contenido visible de la página.
+*/
+
+body {
+  /*
+    font-family: Arial, sans-serif;
+    
+    ¿Qué hace?
+    - Define la fuente (tipo de letra) del texto.
+    - Arial: Fuente preferida (limpia, legible).
+    - sans-serif: Fuente de respaldo si Arial no está disponible.
+    - sans-serif: Significa "sin serifas" (sin adornos pequeños).
+  */
+  font-family: Arial, sans-serif;
+  
+  /*
+    background-color: #808080;
+    
+    ¿Qué hace?
+    - Define el color de fondo de la página.
+    - #808080: Código hexadecimal de color gris.
+    - Formato: #RRGGBB (Rojo, Verde, Azul).
+  */
+  background-color: #808080;
+  
+  /*
+    display: flex;
+    
+    ¿Qué hace?
+    - Activa Flexbox, un sistema para alinear elementos fácilmente.
+    - Permite distribuir el espacio de forma flexible.
+    - Los elementos se alinean automáticamente.
+  */
+  display: flex;
+  
+  /*
+    justify-content: center;
+    
+    ¿Qué hace?
+    - Centra los elementos horizontalmente (de izquierda a derecha).
+    - Solo funciona con display: flex.
+    - center: Los elementos se centran en el eje horizontal.
+  */
+  justify-content: center;
+  
+  /*
+    align-items: center;
+    
+    ¿Qué hace?
+    - Centra los elementos verticalmente (de arriba a abajo).
+    - Solo funciona con display: flex.
+    - center: Los elementos se centran en el eje vertical.
+  */
+  align-items: center;
+  
+  /*
+    min-height: 100vh;
+    
+    ¿Qué hace?
+    - Define la altura mínima del body.
+    - 100vh: 100% de la altura visible (Viewport Height).
+    - Así la página ocupa toda la pantalla.
+    
+    Resultado: El formulario de login estará centrado en la pantalla.
+  */
+  min-height: 100vh;
+}
+
+
+/* ===========================================
+   PANTALLA DE BIENVENIDA
+   =========================================== */
+
+/*
+  .welcome-container: Contenedor principal de la pantalla de bienvenida.
+*/
+
+.welcome-container {
+  /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    ¿Qué hace?
+    - Centra el contenido de bienvenida en el centro de la pantalla.
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /*
+    min-height: 100vh;
+    
+    ¿Qué hace?
+    - Ocupa toda la altura de la pantalla.
+  */
+  min-height: 100vh;
+  
+  /*
+    background-color: #808080;
+    
+    ¿Qué hace?
+    - Color de fondo gris igual que el body.
+  */
+  background-color: #808080;
+}
+
+
+/*
+  .welcome-content: Contenedor con marco naranja dentro de welcome-container.
+*/
+
+.welcome-content {
+  /*
+    background-color: white;
+    
+    ¿Qué hace?
+    - Fondo blanco para el contenedor de bienvenida.
+  */
+  background-color: white;
+  
+  /*
+    border: 8px solid #FF8C00;
+    
+    ¿Qué hace?
+    - Marco naranja alrededor del contenedor de bienvenida.
+    - 8px: Grosor del marco.
+    - #FF8C00: Color naranja.
+  */
+  border: 8px solid #FF8C00;
+  
+  /*
+    border-radius: 12px;
+    
+    ¿Qué hace?
+    - Redondea las esquinas del marco.
+  */
+  border-radius: 12px;
+  
+  /*
+    padding: 60px 40px;
+    
+    ¿Qué hace?
+    - Espacio interior: 60px arriba/abajo, 40px izquierda/derecha.
+  */
+  padding: 60px 40px;
+  
+  /*
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    ¿Qué hace?
+    - Sombra para darle profundidad.
+  */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  
+  /*
+    width: 500px;
+    max-width: 90%;
+    
+    ¿Qué hace?
+    - Ancho del contenedor: 500px en pantallas grandes.
+    - max-width: 90% para que sea responsive en móviles.
+  */
+  width: 500px;
+  max-width: 90%;
+  
+  /*
+    text-align: center;
+    
+    ¿Qué hace?
+    - Centra todo el texto dentro.
+  */
+  text-align: center;
+}
+
+
+/*
+  .project-title: Estilos para "Proyecto de Intensificación de Saberes".
+*/
+
+.project-title {
+  /*
+    font-size: 14px;
+    
+    ¿Qué hace?
+    - Texto pequeño para el título del proyecto.
+  */
+  font-size: 14px;
+  
+  /*
+    color: #666666;
+    
+    ¿Qué hace?
+    - Color gris oscuro.
+  */
+  color: #666666;
+  
+  /*
+    margin-bottom: 20px;
+    
+    ¿Qué hace?
+    - Espacio bajo el título del proyecto.
+  */
+  margin-bottom: 20px;
+  
+  /*
+    font-weight: normal;
+    
+    ¿Qué hace?
+    - Texto normal, no negrita.
+  */
+  font-weight: normal;
+  
+  /*
+    text-transform: uppercase;
+    
+    ¿Qué hace?
+    - Convierte el texto a mayúsculas.
+  */
+  text-transform: uppercase;
+  
+  /*
+    letter-spacing: 1px;
+    
+    ¿Qué hace?
+    - Aumenta el espacio entre letras.
+  */
+  letter-spacing: 1px;
+}
+
+
+/*
+  .welcome-title: Estilos para "Web Alemanpp" en la bienvenida.
+*/
+
+.welcome-title {
+  /*
+    font-size: 56px;
+    
+    ¿Qué hace?
+    - Tamaño muy grande para destacar.
+  */
+  font-size: 56px;
+  
+  /*
+    color: #333;
+    
+    ¿Qué hace?
+    - Color gris muy oscuro (casi negro).
+  */
+  color: #333;
+  
+  /*
+    margin: 0 0 30px 0;
+    
+    ¿Qué hace?
+    - Sin margen arriba, 30px abajo.
+  */
+  margin: 0 0 30px 0;
+  
+  /*
+    font-weight: bold;
+    
+    ¿Qué hace?
+    - Texto en negrita.
+  */
+  font-weight: bold;
+}
+
+
+/*
+  .author-name: Estilos para "Tomás Aleman".
+*/
+
+.author-name {
+  /*
+    font-size: 18px;
+    
+    ¿Qué hace?
+    - Tamaño mediano para el nombre del autor.
+  */
+  font-size: 18px;
+  
+  /*
+    color: #666666;
+    
+    ¿Qué hace?
+    - Color gris oscuro.
+  */
+  color: #666666;
+  
+  /*
+    margin-bottom: 40px;
+    
+    ¿Qué hace?
+    - Espacio bajo el nombre del autor.
+  */
+  margin-bottom: 40px;
+  
+  /*
+    font-style: italic;
+    
+    ¿Qué hace?
+    - Texto en cursiva.
+  */
+  font-style: italic;
+}
+
+
+/*
+  .welcome-button: Estilos para el botón "Siguiente".
+*/
+
+.welcome-button {
+  /*
+    width: 200px;
+    
+    ¿Qué hace?
+    - Ancho del botón.
+  */
+  width: 200px;
+  
+  /*
+    padding: 15px 30px;
+    
+    ¿Qué hace?
+    - Espacio interior: 15px arriba/abajo, 30px izquierda/derecha.
+  */
+  padding: 15px 30px;
+  
+  /*
+    background-color: #FF8C00;
+    
+    ¿Qué hace?
+    - Fondo naranja (mismo que el marco).
+  */
+  background-color: #FF8C00;
+  
+  /*
+    color: white;
+    
+    ¿Qué hace?
+    - Texto blanco.
+  */
+  color: white;
+  
+  /*
+    border: none;
+    
+    ¿Qué hace?
+    - Sin borde.
+  */
+  border: none;
+  
+  /*
+    border-radius: 6px;
+    
+    ¿Qué hace?
+    - Esquinas redondeadas.
+  */
+  border-radius: 6px;
+  
+  /*
+    font-size: 18px;
+    
+    ¿Qué hace?
+    - Texto grande y legible.
+  */
+  font-size: 18px;
+  
+  /*
+    font-weight: bold;
+    
+    ¿Qué hace?
+    - Texto en negrita.
+  */
+  font-weight: bold;
+  
+  /*
+    cursor: pointer;
+    
+    ¿Qué hace?
+    - Cursor cambia a manita al pasar sobre el botón.
+  */
+  cursor: pointer;
+  
+  /*
+    transition: background-color 0.3s ease;
+    
+    ¿Qué hace?
+    - Transición suave del color al pasar sobre el botón.
+    - 0.3s: Duración de la transición en segundos.
+    - ease: Tipo de movimiento suave.
+  */
+  transition: background-color 0.3s ease;
+}
+
+
+/*
+  .welcome-button:hover: Estilos del botón al pasar el mouse.
+*/
+
+.welcome-button:hover {
+  /*
+    background-color: #E67E00;
+    
+    ¿Qué hace?
+    - Cambia a un naranja más oscuro al pasar sobre el botón.
+  */
+  background-color: #E67E00;
+}
+
+
+/* ===========================================
+   PANTALLA DE SELECCIÓN: LOGIN O REGISTRO
+   =========================================== */
+
+/*
+  .choice-container: Contenedor principal de la pantalla de selección.
+*/
+
+.choice-container {
+  /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #808080;
+    
+    ¿Qué hace?
+    - Centra la pantalla de selección en el medio.
+    - Ocupa toda la altura de la pantalla.
+    - Fondo gris.
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #808080;
+}
+
+
+/*
+  .choice-content: Contenedor con opciones blancas.
+*/
+
+.choice-content {
+  /*
+    background-color: white;
+    
+    ¿Qué hace?
+    - Fondo blanco para el cuadro de opciones.
+  */
+  background-color: white;
+  
+  /*
+    padding: 50px 40px;
+    
+    ¿Qué hace?
+    - Espacio interior: 50px arriba/abajo, 40px izquierda/derecha.
+  */
+  padding: 50px 40px;
+  
+  /*
+    border-radius: 8px;
+    
+    ¿Qué hace?
+    - Redondea las esquinas.
+  */
+  border-radius: 8px;
+  
+  /*
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    ¿Qué hace?
+    - Agrega sombra para profundidad.
+  */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  /*
+    width: 400px;
+    max-width: 90%;
+    
+    ¿Qué hace?
+    - Ancho del cuadro: 400px en pantallas grandes.
+    - max-width: 90% para responsive en móviles.
+  */
+  width: 400px;
+  max-width: 90%;
+  
+  /*
+    text-align: center;
+    
+    ¿Qué hace?
+    - Centra el texto horizontalmente.
+  */
+  text-align: center;
+}
+
+
+/*
+  .choice-title: Estilos para el título de la pantalla de selección.
+*/
+
+.choice-title {
+  /*
+    font-size: 28px;
+    
+    ¿Qué hace?
+    - Tamaño grande para el título.
+  */
+  font-size: 28px;
+  
+  /*
+    color: #333;
+    
+    ¿Qué hace?
+    - Color gris muy oscuro.
+  */
+  color: #333;
+  
+  /*
+    margin-bottom: 20px;
+    
+    ¿Qué hace?
+    - Espacio bajo el título.
+  */
+  margin-bottom: 20px;
+  
+  /*
+    font-weight: bold;
+    
+    ¿Qué hace?
+    - Texto en negrita.
+  */
+  font-weight: bold;
+}
+
+
+/*
+  .choice-subtitle: Estilos para el subtítulo.
+*/
+
+.choice-subtitle {
+  /*
+    font-size: 16px;
+    
+    ¿Qué hace?
+    - Tamaño mediano para el subtítulo.
+  */
+  font-size: 16px;
+  
+  /*
+    color: #666666;
+    
+    ¿Qué hace?
+    - Color gris oscuro.
+  */
+  color: #666666;
+  
+  /*
+    margin-bottom: 40px;
+    
+    ¿Qué hace?
+    - Espacio bajo el subtítulo.
+  */
+  margin-bottom: 40px;
+}
+
+
+/*
+  .choice-buttons: Contenedor para los dos botones de selección.
+*/
+
+.choice-buttons {
+  /*
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    ¿Qué hace?
+    - Los botones se apilan verticalmente.
+    - gap: 15px de espacio entre los botones.
+  */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/*
+  .choice-button: Estilos para los botones de selección.
+*/
+
+.choice-button {
+  /*
+    background-color: white;
+    
+    ¿Qué hace?
+    - Fondo blanco para los botones.
+  */
+  background-color: white;
+  
+  /*
+    color: #333;
+    
+    ¿Qué hace?
+    - Texto gris oscuro.
+  */
+  color: #333;
+  
+  /*
+    border: 2px solid #808080;
+    
+    ¿Qué hace?
+    - Borde gris de 2px.
+  */
+  border: 2px solid #808080;
+  
+  /*
+    padding: 15px 30px;
+    
+    ¿Qué hace?
+    - Espacio interior: 15px arriba/abajo, 30px izquierda/derecha.
+  */
+  padding: 15px 30px;
+  
+  /*
+    border-radius: 6px;
+    
+    ¿Qué hace?
+    - Esquinas redondeadas.
+  */
+  border-radius: 6px;
+  
+  /*
+    font-size: 16px;
+    
+    ¿Qué hace?
+    - Texto legible y grande.
+  */
+  font-size: 16px;
+  
+  /*
+    font-weight: bold;
+    
+    ¿Qué hace?
+    - Texto en negrita.
+  */
+  font-weight: bold;
+  
+  /*
+    cursor: pointer;
+    
+    ¿Qué hace?
+    - Cursor cambia a manita.
+  */
+  cursor: pointer;
+  
+  /*
+    transition: all 0.3s ease;
+    
+    ¿Qué hace?
+    - Transición suave para todos los cambios.
+  */
+  transition: all 0.3s ease;
+}
+
+
+/*
+  .choice-button:hover: Estilos al pasar el mouse.
+*/
+
+.choice-button:hover {
+  /*
+    background-color: #808080;
+    color: white;
+    
+    ¿Qué hace?
+    - Cambia el fondo a gris y el texto a blanco.
+    - Proporciona retroalimentación visual.
+  */
+  background-color: #808080;
+  color: white;
+}
+
+
+/* ===========================================
+   PANTALLA DE SELECCIÓN (CHOICE SCREEN)
+   =========================================== */
+
+/*
+  .choice-container: Contenedor de la pantalla de selección.
+  Muestra dos botones para elegir entre Login y Registro.
+*/
+
+.choice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #808080;
+  /* 
+    display: flex: Activa Flexbox para centrar contenido.
+    flex-direction: column: Los elementos se apilan verticalmente.
+    justify-content: center: Centra verticalmente.
+    align-items: center: Centra horizontalmente.
+    min-height: 100vh: Ocupa todo el alto de la ventana.
+    background-color: #808080: Fondo gris oscuro.
+  */
+}
+
+.choice-content {
+  text-align: center;
+  /* 
+    text-align: center: Centra el texto y contenido.
+  */
+}
+
+.choice-title {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 10px;
+  /* 
+    font-size: 2.5em: Tamaño grande para el título.
+    color: white: Texto blanco.
+    margin-bottom: 10px: Espacio debajo del título.
+  */
+}
+
+.choice-subtitle {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 30px;
+  /* 
+    Subtítulo más pequeño en gris claro.
+  */
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* 
+    display: flex: Coloca los botones uno al lado del otro.
+    gap: 20px: Espacio entre botones.
+    flex-wrap: wrap: Si no caben, se envuelven a la siguiente línea.
+  */
+}
+
+.choice-button {
+  background-color: white;
+  color: #333;
+  border: 2px solid #808080;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  /* 
+    background-color: white: Fondo blanco.
+    color: #333: Texto oscuro.
+    border: 2px solid #808080: Borde gris.
+    padding: 15px 30px: Espacio interno del botón.
+    font-size: 1.1em: Texto un poco más grande.
+    cursor: pointer: Cambia el cursor a mano.
+    border-radius: 8px: Esquinas redondeadas.
+    transition: all 0.3s ease: Animación suave al pasar mouse.
+  */
+}
+
+.choice-button:hover {
+  background-color: #FF8C00;
+  color: white;
+  border-color: #FF8C00;
+  transform: scale(1.05);
+  /* 
+    background-color: #FF8C00: Fondo naranja al pasar mouse.
+    color: white: Texto blanco.
+    border-color: #FF8C00: Borde naranja.
+    transform: scale(1.05): El botón se hace un 5% más grande.
+  */
+}
+
+
+/* ===========================================
+   PANTALLA DE REGISTRO
+   =========================================== */
+
+/*
+  .register-container: Contenedor de la pantalla de registro.
+  Similar a login-container pero con ID específico para diferenciarlo.
+*/
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #808080;
+  /* 
+    display: flex: Activa Flexbox.
+    flex-direction: column: Apila elementos verticalmente.
+    justify-content: center: Centra verticalmente.
+    align-items: center: Centra horizontalmente.
+    min-height: 100vh: Ocupa toda la pantalla.
+    background-color: #808080: Fondo gris oscuro.
+  */
+}
+
+.register-container h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2em;
+  /* 
+    color: white: Título en blanco.
+    margin-bottom: 20px: Espacio debajo del título.
+    font-size: 2em: Tamaño grande.
+  */
+}
+
+.register-container form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* 
+    background-color: white: Fondo blanco del formulario.
+    padding: 40px: Espacio interno.
+    border-radius: 8px: Esquinas redondeadas.
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1): Sombra suave.
+    width: 300px: Ancho fijo.
+    display: flex, flex-direction: column: Apila elementos.
+    gap: 15px: Espacio entre campos.
+  */
+}
+
+
+/* ===========================================
+   CONTENEDOR DEL LOGIN (CLASE REUSABLE)
+   =========================================== */
+
+/*
+  .login-container: Aplica estilos a la clase "login-container".
+  Este es el cuadro blanco que contiene el formulario.
+*/
+
+.login-container {
+  /*
+    background-color: white;
+    
+    ¿Qué hace?
+    - Define el color de fondo del contenedor.
+    - white: Color blanco (el cubo/caja principal).
+  */
+  background-color: white;
+  
+  /*
+    padding: 40px;
+    
+    ¿Qué hace?
+    - Agrega relleno (espacio interior) de 40 píxeles.
+    - Esto separa el contenido de los bordes del cuadro.
+    - Mejora la legibilidad.
+  */
+  padding: 40px;
+  
+  /*
+    border-radius: 8px;
+    
+    ¿Qué hace?
+    - Redondea las esquinas del contenedor.
+    - 8px: El radio de redondeo en píxeles.
+    - Valores más altos = esquinas más redondeadas.
+  */
+  border-radius: 8px;
+  
+  /*
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    ¿Qué hace?
+    - Agrega una sombra al cuadro para darle profundidad.
+    - 0: Desplazamiento horizontal (0 = sin desplazamiento).
+    - 2px: Desplazamiento vertical (sombra hacia abajo).
+    - 10px: Difuminación de la sombra (más grande = más suave).
+    - rgba(0, 0, 0, 0.1): Color negro casi transparente.
+    
+    Resultado: Efecto 3D que hace el cuadro más visible.
+  */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  /*
+    width: 300px;
+    
+    ¿Qué hace?
+    - Define el ancho del contenedor en píxeles.
+    - 300px: Ancho ideal para un formulario móvil.
+    - No es demasiado grande ni demasiado pequeño.
+  */
+  width: 300px;
+  
+  /*
+    Cuando se usa como pantalla de login (display: flex):
+    - Ocupa toda la pantalla
+    - Centra el formulario en el medio
+    - Fondo gris
+  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #808080;
+}
+
+
+/* ===========================================
+   4. ESTILOS DEL ENCABEZADO (H1)
+   =========================================== */
+
+/*
+  h1: Estilos para el título principal "Web Alemanpp".
+*/
+
+h1 {
+  /*
+    text-align: center;
+    
+    ¿Qué hace?
+    - Centra el texto horizontalmente.
+    - El título aparecerá en el centro del cuadro.
+  */
+  text-align: center;
+  
+  /*
+    color: #333;
+    
+    ¿Qué hace?
+    - Define el color del texto.
+    - #333: Gris muy oscuro (casi negro).
+    - Mejor que negro puro para menos agresividad visual.
+  */
+  color: #333;
+  
+  /*
+    margin-bottom: 30px;
+    
+    ¿Qué hace?
+    - Agrega margen (espacio exterior) bajo el h1.
+    - 30px: Deja espacio entre el título y el formulario.
+  */
+  margin-bottom: 30px;
+  
+  /*
+    font-size: 24px;
+    
+    ¿Qué hace?
+    - Define el tamaño de la letra.
+    - 24px: Tamaño grande para que destaque.
+  */
+  font-size: 24px;
+}
+
+
+/* ===========================================
+   5. ESTILOS DE LOS GRUPOS DEL FORMULARIO
+   =========================================== */
+
+/*
+  .form-group: Agrupa cada par de label + input.
+*/
+
+.form-group {
+  /*
+    margin-bottom: 20px;
+    
+    ¿Qué hace?
+    - Agrega espacio bajo cada grupo.
+    - 20px: Separación entre el email y la contraseña.
+  */
+  margin-bottom: 20px;
+}
+
+
+/* ===========================================
+   6. ESTILOS DE LAS ETIQUETAS (LABEL)
+   =========================================== */
+
+/*
+  label: Estilos para "Correo Electrónico" y "Contraseña".
+*/
+
+label {
+  /*
+    display: block;
+    
+    ¿Qué hace?
+    - Hace que el label ocupe toda la línea (ancho completo).
+    - block: Elemento en bloque (salto de línea antes y después).
+    - Sin esto, el label estaría en la misma línea que el input.
+  */
+  display: block;
+  
+  /*
+    margin-bottom: 5px;
+    
+    ¿Qué hace?
+    - Agrega 5px de espacio bajo el label.
+    - Separa la etiqueta del campo de entrada.
+  */
+  margin-bottom: 5px;
+  
+  /*
+    color: #555;
+    
+    ¿Qué hace?
+    - Define el color del texto de la etiqueta.
+    - #555: Gris medio.
+  */
+  color: #555;
+  
+  /*
+    font-weight: bold;
+    
+    ¿Qué hace?
+    - Hace el texto más grueso (negrita).
+    - bold: Peso de fuente máximo.
+    - Las etiquetas se ven más importantes.
+  */
+  font-weight: bold;
+}
+
+
+/* ===========================================
+   7. ESTILOS DE LOS CAMPOS DE ENTRADA (INPUT)
+   =========================================== */
+
+/*
+  input: Estilos para los campos de email y contraseña.
+*/
+
+input {
+  /*
+    width: 100%;
+    
+    ¿Qué hace?
+    - El input ocupa el 100% del ancho disponible.
+    - Toma todo el espacio del contenedor.
+  */
+  width: 100%;
+  
+  /*
+    padding: 10px;
+    
+    ¿Qué hace?
+    - Agrega 10px de espacio interior al campo.
+    - El texto no toca los bordes del campo.
+  */
+  padding: 10px;
+  
+  /*
+    border: 1px solid #ddd;
+    
+    ¿Qué hace?
+    - Dibuja un borde alrededor del campo.
+    - 1px: Grosor del borde.
+    - solid: Tipo de borde (línea continua).
+    - #ddd: Color gris claro.
+  */
+  border: 1px solid #ddd;
+  
+  /*
+    border-radius: 4px;
+    
+    ¿Qué hace?
+    - Redondea las esquinas del campo.
+    - 4px: Redondeo sutil.
+  */
+  border-radius: 4px;
+  
+  /*
+    font-size: 14px;
+    
+    ¿Qué hace?
+    - Define el tamaño del texto dentro del campo.
+    - 14px: Tamaño normal, legible.
+  */
+  font-size: 14px;
+}
+
+
+/* ===========================================
+   8. ESTILOS DEL INPUT CUANDO ESTÁ ACTIVO (FOCUS)
+   =========================================== */
+
+/*
+  input:focus: Se aplica cuando el usuario hace clic en un input.
+  :focus es un "pseudo-selector" (estado especial del elemento).
+*/
+
+input:focus {
+  /*
+    outline: none;
+    
+    ¿Qué hace?
+    - Elimina el contorno azul que aparece por defecto.
+    - Navegadores agregan outline azul para accesibilidad.
+    - Aquí lo quitamos para un diseño personalizado.
+  */
+  outline: none;
+  
+  /*
+    border-color: #666666;
+    
+    ¿Qué hace?
+    - Cambia el color del borde a gris oscuro cuando está activo.
+    - #666666: Gris oscuro.
+    - Indica visualmente que el campo está enfocado.
+  */
+  border-color: #666666;
+  
+  /*
+    background-color: #f9f9f9;
+    
+    ¿Qué hace?
+    - Cambia el fondo a gris muy claro.
+    - Proporciona retroalimentación visual al usuario.
+  */
+  background-color: #f9f9f9;
+}
+
+
+/* ===========================================
+   9. ESTILOS DEL BOTÓN (BUTTON)
+   =========================================== */
+
+/*
+  button: Estilos para el botón "Iniciar Sesión".
+*/
+
+button {
+  /*
+    width: 100%;
+    
+    ¿Qué hace?
+    - El botón ocupa el 100% del ancho disponible.
+  */
+  width: 100%;
+  
+  /*
+    padding: 10px;
+    
+    ¿Qué hace?
+    - Agrega espacio interior al botón.
+    - Hace que sea más grande y fácil de hacer clic.
+  */
+  padding: 10px;
+  
+  /*
+    background-color: #666666;
+    
+    ¿Qué hace?
+    - Color de fondo del botón.
+    - #666666: Gris oscuro para el botón.
+  */
+  background-color: #666666;
+  
+  /*
+    color: white;
+    
+    ¿Qué hace?
+    - Color del texto del botón.
+    - white: Contrasta bien con el verde de fondo.
+  */
+  color: white;
+  
+  /*
+    border: none;
+    
+    ¿Qué hace?
+    - Elimina el borde del botón.
+    - Los botones por defecto tienen borde.
+  */
+  border: none;
+  
+  /*
+    border-radius: 4px;
+    
+    ¿Qué hace?
+    - Redondea las esquinas del botón.
+  */
+  border-radius: 4px;
+  
+  /*
+    font-size: 16px;
+    
+    ¿Qué hace?
+    - Tamaño del texto del botón.
+    - 16px: Grande y legible.
+  */
+  font-size: 16px;
+  
+  /*
+    font-weight: bold;
+    
+    ¿Qué hace?
+    - Hace el texto del botón más grueso.
+    - Destaca el texto.
+  */
+  font-weight: bold;
+  
+  /*
+    cursor: pointer;
+    
+    ¿Qué hace?
+    - Cambia el cursor a una manita cuando pasa sobre el botón.
+    - Indica que el botón es clickeable.
+  */
+  cursor: pointer;
+  
+  /*
+    margin-top: 10px;
+    
+    ¿Qué hace?
+    - Agrega espacio sobre el botón.
+    - Lo separa del campo de contraseña.
+  */
+  margin-top: 10px;
+}
+
+
+/* ===========================================
+   10. ESTILOS DEL BOTÓN CUANDO PASAS SOBRE ÉL (HOVER)
+   =========================================== */
+
+/*
+  button:hover: Se aplica cuando el usuario pasa el mouse sobre el botón.
+  :hover es un "pseudo-selector" (estado especial del elemento).
+*/
+
+button:hover {
+  /*
+    background-color: #555555;
+    
+    ¿Qué hace?
+    - Cambia el color a un gris más oscuro.
+    - Proporciona retroalimentación visual.
+    - Indica que el botón es interactivo.
+  */
+  background-color: #555555;
+}
+
+
+/* ===========================================
+   11. ESTILOS DEL CONTENEDOR DE ENLACES
+   =========================================== */
+
+/*
+  .link-container: Contiene los enlaces de "Regístrate" y "Olvidaste contraseña".
+*/
+
+.link-container {
+  /*
+    text-align: center;
+    
+    ¿Qué hace?
+    - Centra el texto horizontalmente.
+  */
+  text-align: center;
+  
+  /*
+    margin-top: 20px;
+    
+    ¿Qué hace?
+    - Agrega espacio sobre los enlaces.
+    - Los separa del botón de login.
+  */
+  margin-top: 20px;
+}
+
+
+/* ===========================================
+   12. ESTILOS DE LOS ENLACES (A)
+   =========================================== */
+
+/*
+  a: Estilos para los hipervínculos.
+*/
+
+a {
+  /*
+    color: #666666;
+    
+    ¿Qué hace?
+    - Color del texto del enlace.
+    - #666666: Gris oscuro para consistencia visual.
+  */
+  color: #666666;
+  
+  /*
+    text-decoration: none;
+    
+    ¿Qué hace?
+    - Elimina el subrayado por defecto de los enlaces.
+    - Los enlaces se ven más limpios.
+  */
+  text-decoration: none;
+  
+  /*
+    font-size: 14px;
+    
+    ¿Qué hace?
+    - Tamaño del texto de los enlaces.
+    - 14px: Más pequeño que el texto principal.
+  */
+  font-size: 14px;
+}
+
+
+/* ===========================================
+   13. ESTILOS DE LOS ENLACES CUANDO PASAS SOBRE ELLOS (HOVER)
+   =========================================== */
+
+/*
+  a:hover: Se aplica cuando el usuario pasa el mouse sobre un enlace.
+*/
+
+a:hover {
+  /*
+    text-decoration: underline;
+    
+    ¿Qué hace?
+    - Agrega un subrayado cuando pasas sobre el enlace.
+    - Indica que es un enlace interactivo.
+  */
+  text-decoration: underline;
+}
+
+/*
+  ====================================
+  RESUMEN DE CONCEPTOS CSS USADOS
+  ====================================
+  
+  1. Selectores:
+     - *: Selector universal (todos los elementos)
+     - body, h1, label, input, button, a: Selectores de elemento
+     - .login-container, .form-group: Selectores de clase (.)
+     - :focus, :hover: Pseudo-selectores (estados especiales)
+  
+  2. Propiedades comunes:
+     - color: Color del texto
+     - background-color: Color de fondo
+     - padding: Espacio interior
+     - margin: Espacio exterior
+     - border: Borde del elemento
+     - width: Ancho
+     - font-size: Tamaño de letra
+     - display: Tipo de visualización (flex)
+  
+  3. Unidades:
+     - px: Píxeles (unidad fija)
+     - vh: Viewport Height (altura de pantalla)
+     - rgb, rgba: Formato de color (rojo, verde, azul, alfa)
+     - hex (#RRGGBB): Color hexadecimal
+  
+  4. Conceptos:
+     - Flexbox: Sistema de alineación flexible
+     - Media queries: No usadas aquí, pero útiles para responsive
+     - Pseudo-selectores: :hover, :focus para estados especiales
+*/
+
+
+/* ===========================================
+   PANTALLA DE DASHBOARD (BIENVENIDA DESPUÉS DE LOGIN)
+   =========================================== */
+
+/*
+  .dashboard-container: Contenedor principal de la pantalla de bienvenida.
+*/
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #808080;
+  position: relative;
+  /* 
+    display: flex: Activa Flexbox.
+    flex-direction: column: Elementos apilados verticalmente.
+    justify-content: center: Centra verticalmente.
+    align-items: center: Centra horizontalmente.
+    min-height: 100vh: Ocupa toda la pantalla.
+    background-color: #808080: Fondo gris oscuro.
+    position: relative: Necesario para posicionar el botón de logout en las esquinas.
+  */
+}
+
+/*
+  .logout-button: Botón para cerrar sesión en la esquina superior derecha.
+*/
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* 
+    position: absolute: Posicionamiento fijo en la esquina.
+    top: 20px: 20 píxeles desde el top.
+    right: 20px: 20 píxeles desde la derecha.
+    background-color: white: Fondo blanco.
+    color: #333: Texto gris oscuro.
+    border: 2px solid #333: Borde gris oscuro.
+    padding: 10px 20px: Espacio interno.
+    border-radius: 6px: Esquinas redondeadas.
+    font-size: 14px: Texto pequeño.
+    font-weight: bold: Texto en negrita.
+    cursor: pointer: Cursor de mano.
+    transition: all 0.3s ease: Animación al hover.
+  */
+}
+
+/*
+  .logout-button:hover: Estilos del botón al pasar mouse.
+*/
+
+.logout-button:hover {
+  background-color: #f0f0f0;
+  /* 
+    background-color: #f0f0f0: Gris muy claro.
+  */
+}
+
+/*
+  .welcome-message: Estilos para "¡Bienvenido!"
+*/
+
+.welcome-message {
+  font-size: 4em;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* 
+    font-size: 4em: Muy grande (4 veces el tamaño base).
+    color: white: Texto blanco.
+    margin-bottom: 20px: Espacio debajo.
+    font-weight: bold: Texto en negrita.
+    text-transform: uppercase: Todo en mayúsculas.
+    letter-spacing: 2px: Espacio entre letras.
+  */
+}
+
+
+/* ===========================================
+   MODAL DE CONFIRMACIÓN DE CERRAR SESIÓN
+   =========================================== */
+
+/*
+  .logout-modal: Fondo oscuro detrás del modal (overlay).
+*/
+
+.logout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  /* 
+    position: fixed: Se queda en el lugar aunque se scrollee.
+    top: 0, left: 0, width: 100%, height: 100%: Ocupa toda la pantalla.
+    background-color: rgba(0, 0, 0, 0.5): Fondo negro semi-transparente.
+    display: flex: Centra el contenido.
+    z-index: 999: Se pone encima de todo.
+  */
+}
+
+/*
+  .logout-modal-content: El cuadro blanco con el mensaje y botones.
+*/
+
+.logout-modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  /* 
+    background-color: white: Fondo blanco.
+    padding: 40px: Espacio interior.
+    border-radius: 12px: Esquinas redondeadas.
+    text-align: center: Texto centrado.
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3): Sombra fuerte.
+    width: 400px: Ancho fijo.
+    max-width: 90%: Responsive en móviles.
+  */
+}
+
+/*
+  h2 en el modal: Pregunta de confirmación.
+*/
+
+.logout-modal-content h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 30px;
+  /* 
+    color: #333: Texto gris oscuro.
+    font-size: 24px: Tamaño grande.
+    margin-bottom: 30px: Espacio debajo.
+  */
+}
+
+/*
+  .logout-modal-buttons: Contenedor para los botones sí y no.
+*/
+
+.logout-modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  /* 
+    display: flex: Los botones uno al lado del otro.
+    gap: 15px: Espacio entre los botones.
+    justify-content: center: Centrados horizontalmente.
+  */
+}
+
+/*
+  .logout-yes: Botón "Sí" (confirmar cerrar sesión).
+*/
+
+.logout-yes {
+  background-color: #FF8C00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* 
+    background-color: #FF8C00: Naranja.
+    color: white: Texto blanco.
+    border: none: Sin borde.
+    padding: 12px 30px: Espacio interno.
+    border-radius: 6px: Esquinas redondeadas.
+    font-size: 16px: Texto grande.
+    font-weight: bold: Texto en negrita.
+    cursor: pointer: Cursor de mano.
+    transition: background-color 0.3s ease: Animación suave.
+  */
+}
+
+/*
+  .logout-yes:hover: Botón "Sí" al pasar mouse.
+*/
+
+.logout-yes:hover {
+  background-color: #E67E00;
+  /* 
+    background-color: #E67E00: Naranja más oscuro.
+  */
+}
+
+/*
+  .logout-no: Botón "No" (cancelar).
+*/
+
+.logout-no {
+  background-color: #808080;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* 
+    background-color: #808080: Gris.
+    color: white: Texto blanco.
+    border: none: Sin borde.
+    padding: 12px 30px: Espacio interno.
+    border-radius: 6px: Esquinas redondeadas.
+    font-size: 16px: Texto grande.
+    font-weight: bold: Texto en negrita.
+    cursor: pointer: Cursor de mano.
+    transition: background-color 0.3s ease: Animación suave.
+  */
+}
+
+/*
+  .logout-no:hover: Botón "No" al pasar mouse.
+*/
+
+.logout-no:hover {
+  background-color: #666666;
+  /* 
+    background-color: #666666: Gris más oscuro.
+  */
+}
+
